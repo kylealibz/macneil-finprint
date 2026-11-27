@@ -1,0 +1,6 @@
+source("R/plots.R")
+draws <- read.csv("results/simulation-replicates.csv")
+scenarios <- unique(draws$scenario)
+plot_footprint(read.csv("results/sampling-by-location.csv"))
+plot_recovery(draws, scenarios)
+plot_zeros(read.csv("results/simulation-summary.csv"), scenarios)
